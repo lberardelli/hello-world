@@ -14,6 +14,7 @@
 int main()
 {
     std::ostream_iterator<std::string> it(std::cout, "\n");
-    std::vector<std::string> vecOut{"hello guv"};
+    std::vector<std::string> vecOut;
+    vecOut.push_back("hello guv");
     std::copy(vecOut.begin(), vecOut.end(), it);
 }
