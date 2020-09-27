@@ -7,9 +7,13 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main()
+{
+    std::ostream_iterator<std::string> it(std::cout, "\n");
+    std::vector<std::string> vecOut{"hello guv"};
+    std::copy(vecOut.begin(), vecOut.end(), it);
 }
